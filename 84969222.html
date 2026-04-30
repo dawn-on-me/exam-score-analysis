@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>袁玺童 - 高一物理月考专属诊断报告</title>
+    
+    <!-- 加载数学公式渲染引擎 MathJax 3.0 -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            },
+            startup: {
+                pageReady: () => {
+                    return MathJax.startup.defaultPageReady().then(() => {
+                        console.log('MathJax initial typesetting complete');
+                    });
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+
+    <style>
+        :root {
+            --primary-color: #2c5282;
+            --bg-color: #f7fafc;
+            --text-color: #2d3748;
+            --border-color: #e2e8f0;
+        }
+
+        body { 
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text-color); 
+            max-width: 850px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+            background-color: var(--bg-color); 
+        }
+
+        .report-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .header { 
+            background: var(--primary-color); 
+            color: white; 
+            padding: 30px; 
+            text-align: center; 
+        }
+
+        .header h1 { margin: 0; font-size: 26px; letter-spacing: 2px; }
+        .header p { margin: 10px 0 0 0; font-size: 15px; opacity: 0.9; }
+
+        .content { padding: 40px; }
+
+        /* 优化 Markdown 转换后的 HTML 样式 */
+        h3 { 
+            color: var(--primary-color); 
+            border-left: 5px solid var(--primary-color); 
+            padding-left: 12px; 
+            margin-top: 40px; 
+            font-size: 20px;
+        }
+
+        p { margin: 15px 0; }
+
+        /* 表格样式：用于班级均分对比 */
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 20px 0; 
+            font-size: 14px;
+        }
+        th, td { 
+            border: 1px solid var(--border-color); 
+            padding: 12px; 
+            text-align: center; 
+        }
+        th { background-color: #edf2f7; font-weight: bold; }
+
+        /* 重点内容高亮 */
+        strong { color: #c53030; font-weight: 600; }
+
+        /* 物理公式容器微调 */
+        .MathJax { 
+            font-size: 1.1em !important; 
+            color: #1a202c;
+        }
+
+        .footer { 
+            text-align: center; 
+            padding: 30px; 
+            font-size: 13px; 
+            color: #718096; 
+            background: #edf2f7;
+            border-top: 1px solid var(--border-color);
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .report-card { box-shadow: none; border: none; }
+            .header { -webkit-print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+    <div class="report-card">
+        <div class="header">
+            <h1>高一物理月考 · 专属学情诊断报告</h1>
+            <p>学生姓名：袁玺童 &nbsp;&nbsp; | &nbsp;&nbsp; 专属考号：84969222</p>
+        </div>
+        
+        <div class="content">
+            <!-- 此处填充由 Python 生成并转换的 Markdown 内容 -->
+            <h3>📊 班级对比与学情定位</h3>
+<ul>
+<li>总分：$37.0$</li>
+<li>客观分：$20.0$，高于班均 $16.9$</li>
+<li>主观分：$17.0$，低于班均 $17.9$</li>
+<li>实验题：$5.0$，高于班均 $4.4$</li>
+<li>计算题：$12.0$，低于班均 $13.4$</li>
+</ul>
+<p>从分项看，这份试卷的结构很清楚：</p>
+<ol>
+<li><strong>客观题整体不弱</strong>，尤其第4、5、6、9、10题拿分有效。</li>
+<li><strong>主观题失分集中在两个断点</strong>：</li>
+<li>第12题实验题：$0/9$</li>
+<li>第13题计算题：$0/12$</li>
+</ol>
+<p>低于班级平均水平的题号有：</p>
+<ul>
+<li>第1题：$0 &lt; 0.8$</li>
+<li>第2题：$0 &lt; 1.4$</li>
+<li>第3题：$0 &lt; 1.1$</li>
+<li>第12题：$0 &lt; 1.6$</li>
+<li>第13题：$0 &lt; 4.6$</li>
+</ul>
+<p>这说明当前卷面不是“大面积不会”，而是<strong>少数关键模型一旦起步式子错，整题直接坍塌</strong>。</p>
+<hr />
+<h3>📡 客观题知识盲区（第1-10题，简略扫描）</h3>
+<p>结合小分数据，客观题主要盲区集中在以下三个模型：</p>
+<h4>1. 第1题：功、势能正负号 + 曲线运动条件</h4>
+<p>第1题失分，说明这里对两个底层判断还不稳：</p>
+<ul>
+<li><strong>功和重力势能是标量，但正负有明确物理意义</strong></li>
+<li><strong>物体做曲线运动的条件不是“有力就拐弯”，而是合外力与速度不共线</strong></li>
+</ul>
+<p>这一类题一旦把“正负号”当成“大小比较”，判断会直接偏掉。</p>
+<h4>2. 第2题：合外力与速度夹角的动力学判定</h4>
+<p>第2题失分对应的是：</p>
+<ul>
+<li>合外力与速度夹角为锐角：速度增大</li>
+<li>为钝角：速度减小</li>
+<li>合外力总指向轨迹凹侧</li>
+</ul>
+<p>这类题不是靠“看图感觉”，而是要先做<strong>力与速度方向关系判断</strong>，再谈轨迹。</p>
+<h4>3. 第3题：万有引力与航天比较法</h4>
+<p>第3题失分说明以下比较链条未稳定建立：</p>
+<ul>
+<li>同一点轨道上的向心加速度只由万有引力决定</li>
+<li>不同轨道机械能比较要抓住轨道高低</li>
+<li>周期比较用开普勒第三定律</li>
+</ul>
+<p>航天题最忌讳把“速度大”直接等同于“机械能大”，这是两套判断标准。</p>
+<h4>4. 第8题、第10题</h4>
+<p>这两题都拿到部分或满额附近得分，说明：
+- 机械能守恒条件的判断已有基础
+- 恒力作用下的曲线运动图景并非空白</p>
+<p>这是客观题中已经可用的动作，不需要推倒重来。</p>
+<hr />
+<h3>🔬 实验题重点核查（第11-12题，盯紧卷面）</h3>
+<h4>第11题：$5/6$</h4>
+<p>先看卷面上已经做对的动作：</p>
+<ul>
+<li>第11题最后一空明确写出 <strong>“$0.2$”</strong>，这一写法是对的。<br />
+  这说明你已经抓住了该题最危险的考点之一：<strong>按要求保留一位有效数字</strong>，没有写成 $0.20$ 或 $3.0$ 这一类典型错误。</li>
+</ul>
+<p>卷面失去的这 $1$ 分，更像是前面空格中的<strong>选项/数据读取</strong>问题，而不是平抛主公式本身失控。<br />
+也就是说，这题的核心方法没有明显塌掉：</p>
+<ul>
+<li>竖直方向利用 $\Delta h = gT^2$</li>
+<li>水平方向利用匀速关系求初速度</li>
+</ul>
+<p>这部分不需要大修，只需要把“读数—代入—单位—有效数字”四步连紧。</p>
+<hr />
+<h4>第12题：$0/9$</h4>
+<p>这一题卷面问题非常集中，而且是<strong>表达链条中断</strong>。</p>
+<p>卷面可见内容有：</p>
+<ul>
+<li>第(1)空写了 <strong>“B”</strong></li>
+<li>第(2)中写了两个数：<strong>“$1.36$”</strong>、<strong>“$2.36$”</strong></li>
+<li>接着写了结论句：<strong>“$m_1,m_2$ 组成的系统机械能守恒”</strong></li>
+<li>第(3)写了 <strong>“$3.14$”</strong></li>
+</ul>
+<p>问题在这里：</p>
+<h5>1. 第(2)问只写结论，不写验证等式</h5>
+<p>实验题不能只写一句“机械能守恒”，必须把验证对象写出来，例如：</p>
+<p>$$
+\Delta E_k = \Delta E_p
+$$</p>
+<p>或者展开成系统的具体表达式。<br />
+只写结论句，阅卷无法判断你验证的是哪一部分量、如何得到。</p>
+<h5>2. 瞬时速度处理痕迹缺失</h5>
+<p>本题核心是纸带法求瞬时速度，必须出现类似动作：</p>
+<p>$$
+v_n=\frac{x_{n+1}-x_{n-1}}{2T}
+$$</p>
+<p>或者“中间时刻瞬时速度等于该段平均速度”的明确处理。<br />
+卷面上的 <strong>“$1.36$”“$2.36$”</strong> 只是结果数字，没有看到来源关系式，实验题这样写很容易整步不给分。</p>
+<h5>3. 第(3)空写“$3.14$”，大概率把斜率直接当成了 $g$</h5>
+<p>这题最常见断裂是：</p>
+<ul>
+<li>图像斜率 $k$ <strong>不是直接等于</strong> $g$</li>
+<li>而是</li>
+</ul>
+<p>$$
+k=\frac{m_2-m_1}{m_1+m_2}g
+$$</p>
+<p>所以应该进一步变形：</p>
+<p>$$
+g=\frac{m_1+m_2}{m_2-m_1}k
+$$</p>
+<p>如果把斜率数值直接写成重力加速度，物理量对应关系就错了。<br />
+第12题的卷面正是这个特征：<strong>有数字，没有物理映射。</strong></p>
+<hr />
+<h3>🔍 专属大题微观面批（第13-15题，核心病灶分析）</h3>
+<hr />
+<h4>第13题：$0/12$ —— 起步公式分母就错，整题全部失效</h4>
+<p>先指出一个正确动作：</p>
+<ul>
+<li>你一开始就在尝试把<strong>天体表面重力加速度</strong>和<strong>万有引力</strong>联系起来，这个建模方向是对的。<br />
+  也就是说，你知道这题必须从
+  “表面重力 $\leftrightarrow$ 万有引力”
+  切入，而不是从纯代数硬推。</li>
+</ul>
+<p>但下一个逻辑断裂点出现在<strong>第一行公式本身</strong>：</p>
+<p>卷面写成了近似这样的形式：</p>
+<p>$$
+mg=\frac{GMm}{R}
+$$</p>
+<p>随后推出：</p>
+<p>$$
+gR=GM
+$$</p>
+<p>这里分母少了一个 $R$。<br />
+天体表面的万有引力应该是：</p>
+<p>$$
+G\frac{Mm}{R^2}=mg
+$$</p>
+<p>所以应推出：</p>
+<p>$$
+gR^2=GM
+$$</p>
+<p>不是 $gR=GM$。</p>
+<p>这不是“小计算失误”，而是<strong>物理模型的距离平方反比定律丢失</strong>。<br />
+一旦这里错，后面所有关于第一宇宙速度、密度、半径的推导都会全部偏离。</p>
+<p>这题的标准推进链条应该是：</p>
+<ol>
+<li>表面重力：
+   $$
+   G\frac{Mm}{R^2}=mg
+   $$</li>
+<li>第一宇宙速度：
+   $$
+   mg=m\frac{v_1^2}{R}
+   $$</li>
+<li>得到
+   $$
+   v_1=\sqrt{gR}
+   $$</li>
+<li>再用
+   $$
+   \rho=\frac{M}{V}, \qquad V=\frac{4\pi R^3}{3}
+   $$</li>
+<li>消去 $M,R$，建立 $g$ 与 $\rho$ 的解析关系</li>
+</ol>
+<p>你这题当前最需要修正的不是“会不会推”，而是<strong>第一行必须先写对平方关系</strong>。</p>
+<hr />
+<h4>第14题：$5/14$ —— 第一步向心加速度抓到了，第二步受力方程方向错位</h4>
+<p>先指出卷面里一个正确步骤：</p>
+<ul>
+<li>第(1)问写出了
+  $$
+  a_n=\omega^2 r
+  $$
+  并算出了数值。</li>
+</ul>
+<p>这说明你知道匀速圆周运动的核心不是“受力平衡”，而是先找<strong>向心加速度</strong>。这是正确入口。</p>
+<p>但第(2)问开始，逻辑突然断掉：</p>
+<p>卷面写了类似：</p>
+<p>$$
+mg-T_A=0
+$$</p>
+<p>以及</p>
+<p>$$
+T_B-mg=\cdots
+$$</p>
+<p>问题在于：这道题不是静止，不是平衡，<strong>最高点和最低点都在做圆周运动</strong>，沿半径方向必须满足牛顿第二定律。</p>
+<p>标准方程应是：</p>
+<ul>
+<li>最高点：
+  $$
+  F_A+4mg=4m\omega^2L
+  $$</li>
+<li>最低点：
+  $$
+  F_B-5mg=5m\omega^2L
+  $$</li>
+</ul>
+<p>你在最高点把式子写成了“受力平衡型”，等于把向心需求删掉了。<br />
+这就是第14题的主失分点：<strong>把圆周运动时的径向动力学误写成平衡关系。</strong></p>
+<p>再看第(3)问，卷面写了：</p>
+<p>$$
+F_A=ma_n
+$$</p>
+<p>这一步只抓到了<strong>水平向心分量</strong>，但漏掉了竖直方向抗重力分量。<br />
+水平位置时，轻杆作用力不是单一水平力，而要分解成：</p>
+<ul>
+<li>水平方向提供向心力：
+  $$
+  F_x=4ma_n
+  $$</li>
+<li>竖直方向平衡重力：
+  $$
+  F_y=4mg
+  $$</li>
+</ul>
+<p>最终杆力大小应做矢量合成：</p>
+<p>$$
+F=\sqrt{F_x^2+F_y^2}
+$$</p>
+<p>因此这题不是“不会列式”，而是<strong>受力方向只列了一半</strong>。</p>
+<hr />
+<h4>第15题：$7/19$ —— 已经出现分段意识，但摩擦生热与圆轨道临界条件没有彻底打通</h4>
+<p>先指出卷面中一个有效动作：</p>
+<ul>
+<li>第(1)问你先用弹簧释放能量求出初速度，写了
+  $$
+  W_T=\frac12 mv^2-0
+  $$
+  并得到
+  $$
+  v=8\text{ m/s}
+  $$</li>
+<li>接着又做了分段：</li>
+<li>先减速阶段求 $t_1,x_1$</li>
+<li>再共速阶段求 $t_2$</li>
+<li>最后合成总时间</li>
+</ul>
+<p>这说明你已经意识到机车/传送带类问题不能“一段到底”，而要做<strong>分段动力学拼接</strong>。这个动作是对的。</p>
+<p>但下一个断裂点出现在第(2)问热量：</p>
+<p>卷面写成了</p>
+<p>$$
+Q=Fs=\mu mgs
+$$</p>
+<p>并代出 $Q=30\text{ J}$。</p>
+<p>这里的错误非常明确：<br />
+<strong>摩擦生热用的是相对位移，不是物体对地的绝对位移。</strong></p>
+<p>应写成：</p>
+<p>$$
+Q=\mu mg\,\Delta x_{\text{相对}}
+$$</p>
+<p>其中</p>
+<p>$$
+\Delta x_{\text{相对}}=x_{\text{带}}-x_{\text{物}}
+$$</p>
+<p>只要把 $s$ 直接拿来代，热量就会系统性偏大或偏小。</p>
+<p>第(3)问你写了重力做功与动能变化关系：</p>
+<p>$$
+W_G=\frac12 mv_C^2-\frac12 mv_A^2
+$$</p>
+<p>这个“用动能定理连接底点与顶点”的方向是对的。<br />
+但后面还缺了决定题目成败的<strong>临界条件判断</strong>：</p>
+<p>若要求小物块通过最高点而不脱离轨道，必须满足</p>
+<p>$$
+mg\le m\frac{v_C^2}{R}
+$$</p>
+<p>即</p>
+<p>$$
+v_C^2\ge gR
+$$</p>
+<p>再和上升过程的动能定理联立，才能反推出传送带速度范围。</p>
+<p>这题的压轴陷阱还不止一个。除了完整圆周运动条件，还要考虑“<strong>不能过顶，只在下半圆摆动但不超过圆心高度</strong>”这一支情况。<br />
+也就是说，这题不是只求一个下限，还存在另一段约束区间。卷面目前只推进到了“算一个点上的速度/拉力”，没有进入“区间判定”。</p>
+<p>所以第15题当前的实际状态是：</p>
+<ul>
+<li><strong>分段运动意识：有</strong></li>
+<li><strong>摩擦生热对象：错</strong></li>
+<li><strong>圆轨道临界条件：未封口</strong></li>
+<li><strong>区间答案意识：不足</strong></li>
+</ul>
+<hr />
+<h3>🎯 章老师的靶向修正指令</h3>
+<p>下面只给立刻可执行的修正动作，不给空话。</p>
+<h4>指令1：第13题模型，连续抄写并口述 6 遍</h4>
+<p>每次必须完整写出以下三式，不能跳步：</p>
+<p>$$
+G\frac{Mm}{R^2}=mg
+$$</p>
+<p>$$
+mg=m\frac{v_1^2}{R}
+$$</p>
+<p>$$
+v_1=\sqrt{gR}
+$$</p>
+<p>然后再补写：</p>
+<p>$$
+\rho=\frac{M}{\frac{4}{3}\pi R^3}
+$$</p>
+<p>训练目标只有一个：<br />
+<strong>把“$R^2$”钉死，杜绝再写成 $R$。</strong></p>
+<hr />
+<h4>指令2：第14题专练“圆周运动不是平衡”</h4>
+<p>拿一张纸，只练三种位置：最高点、最低点、水平位置。<br />
+每个位置固定写三步：</p>
+<ol>
+<li>先定半径方向</li>
+<li>再写牛顿第二定律</li>
+<li>最后判断是否需要分解、是否需要合成</li>
+</ol>
+<p>必须写成这种格式：</p>
+<ul>
+<li>最高点：
+  $$
+  \sum F_{\text{向心}}=m\omega^2L
+  $$</li>
+<li>最低点：
+  $$
+  \sum F_{\text{向心}}=m\omega^2L
+  $$</li>
+<li>水平位置：
+  $$
+  F_x=m\omega^2L,\qquad F_y=mg
+  $$</li>
+</ul>
+<p>然后合成：</p>
+<p>$$
+F=\sqrt{F_x^2+F_y^2}
+$$</p>
+<p>训练目标：<br />
+<strong>看到圆周运动，先想“向心方程”，不要先写“$=$0”。</strong></p>
+<hr />
+<h4>指令3：第12题实验题，按“结果前必须有来源式”重写一遍</h4>
+<p>把第12题卷面重写时，强制加入以下结构：</p>
+<ol>
+<li>速度来源：
+   $$
+   v=\frac{\Delta x}{\Delta t}
+   $$
+   或中间时刻速度表达式</li>
+<li>验证对象：
+   $$
+   \Delta E_k=\Delta E_p
+   $$</li>
+<li>图像斜率关系：
+   $$
+   k=\frac{m_2-m_1}{m_1+m_2}g
+   $$</li>
+<li>最后才求
+   $$
+   g
+   $$</li>
+</ol>
+<p>训练目标：<br />
+<strong>实验题不允许只留数字和结论句，必须留下“物理量是怎么来的”。</strong></p>
+<hr />
+<h4>指令4：第15题只练“相对位移”</h4>
+<p>把这两个式子并排写 10 次，并各做 2 道代数替换练习：</p>
+<p>$$
+Q=\mu mg\,\Delta x_{\text{相对}}
+$$</p>
+<p>$$
+\Delta x_{\text{相对}}=x_{\text{带}}-x_{\text{物}}
+$$</p>
+<p>再专门区分：</p>
+<ul>
+<li>绝对位移：对地</li>
+<li>相对位移：物体与皮带之间</li>
+</ul>
+<p>训练目标：<br />
+<strong>看到“摩擦生热”，第一反应不是 $Fs$，而是相对位移。</strong></p>
+<hr />
+<h4>指令5：客观题补点，只补 3 个题型</h4>
+<p>本周只做以下三类选择题，各做 5 题：</p>
+<ol>
+<li>功、势能、曲线运动基础判断</li>
+<li>航天轨道比较</li>
+<li>力与速度夹角决定速度变化</li>
+</ol>
+<p>每道题做完后只回答两个问题：</p>
+<ul>
+<li>合外力方向在哪里？</li>
+<li>速度大小是增大、减小还是不变？</li>
+</ul>
+<p>训练目标：<br />
+把第1、2、3题这种“概念判断失分”压到最低。</p>
+<hr />
+<p>这份卷面最需要修的，不是题量，而是<strong>起步公式和受力方程的方向</strong>。<br />
+第11题、第14题、第15题都已经出现了可用动作；下一步任务是把这些局部正确动作接成完整物理链条。</p>
+        </div>
+
+        <div class="footer">
+            <p>基于原始卷面、得分明细及班级均分数据交叉比对生成</p>
+            <p>诊断架构师：<strong>章老师</strong></p>
+                    </div>
+    </div>
+</body>
+</html>

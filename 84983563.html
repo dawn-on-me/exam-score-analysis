@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>刘航宇 - 高一物理月考专属诊断报告</title>
+    
+    <!-- 加载数学公式渲染引擎 MathJax 3.0 -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            },
+            startup: {
+                pageReady: () => {
+                    return MathJax.startup.defaultPageReady().then(() => {
+                        console.log('MathJax initial typesetting complete');
+                    });
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+
+    <style>
+        :root {
+            --primary-color: #2c5282;
+            --bg-color: #f7fafc;
+            --text-color: #2d3748;
+            --border-color: #e2e8f0;
+        }
+
+        body { 
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text-color); 
+            max-width: 850px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+            background-color: var(--bg-color); 
+        }
+
+        .report-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .header { 
+            background: var(--primary-color); 
+            color: white; 
+            padding: 30px; 
+            text-align: center; 
+        }
+
+        .header h1 { margin: 0; font-size: 26px; letter-spacing: 2px; }
+        .header p { margin: 10px 0 0 0; font-size: 15px; opacity: 0.9; }
+
+        .content { padding: 40px; }
+
+        /* 优化 Markdown 转换后的 HTML 样式 */
+        h3 { 
+            color: var(--primary-color); 
+            border-left: 5px solid var(--primary-color); 
+            padding-left: 12px; 
+            margin-top: 40px; 
+            font-size: 20px;
+        }
+
+        p { margin: 15px 0; }
+
+        /* 表格样式：用于班级均分对比 */
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 20px 0; 
+            font-size: 14px;
+        }
+        th, td { 
+            border: 1px solid var(--border-color); 
+            padding: 12px; 
+            text-align: center; 
+        }
+        th { background-color: #edf2f7; font-weight: bold; }
+
+        /* 重点内容高亮 */
+        strong { color: #c53030; font-weight: 600; }
+
+        /* 物理公式容器微调 */
+        .MathJax { 
+            font-size: 1.1em !important; 
+            color: #1a202c;
+        }
+
+        .footer { 
+            text-align: center; 
+            padding: 30px; 
+            font-size: 13px; 
+            color: #718096; 
+            background: #edf2f7;
+            border-top: 1px solid var(--border-color);
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .report-card { box-shadow: none; border: none; }
+            .header { -webkit-print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+    <div class="report-card">
+        <div class="header">
+            <h1>高一物理月考 · 专属学情诊断报告</h1>
+            <p>学生姓名：刘航宇 &nbsp;&nbsp; | &nbsp;&nbsp; 专属考号：84983563</p>
+        </div>
+        
+        <div class="content">
+            <!-- 此处填充由 Python 生成并转换的 Markdown 内容 -->
+            <h3>📊 班级对比与学情定位</h3>
+<ul>
+<li>总分：$30.0$，班级均分约为 $40.6$，分差 $-10.6$。</li>
+<li>客观分：$16.0$，班均 $19.2$，分差 $-3.2$。</li>
+<li>主观分：$14.0$，班均 $21.4$，分差 $-7.4$。</li>
+<li>实验题：$6.0$，班均 $5.2$，这一板块高于班均，但卷面仍有关键物理表达缺口。</li>
+<li>计算题：$8.0$，班均 $16.3$，分差 $-8.3$，当前主要失分集中在大题建模与列式连续性。</li>
+</ul>
+<p><strong>低于班级平均水平的题号：</strong>
+- 客观题：第 $1,3,4,7,8$ 题明显低于班均。
+- 主观题：第 $13,14,15$ 题低于班均，其中第 $13$ 题失分最重。
+- 第 $10$ 题虽然得分不低于班均，但未拿满，说明恒力曲线运动的完整判定仍不稳。</p>
+<hr />
+<h3>📡 客观题知识盲区（第1-10题，简略扫描）</h3>
+<p><strong>第1题：</strong>
+- 本题失分对应两个底层点未接通：<br />
+  1. 功、重力势能的正负是<strong>物理意义判断</strong>，不是看“大小”；<br />
+  2. 曲线运动是否成立，取决于<strong>合外力是否与速度共线</strong>。<br />
+- 这里的断层通常表现为：把“有力作用”直接等同于“做曲线运动”，中间漏掉了速度方向这一层。</p>
+<p><strong>第3题：</strong>
+- 万有引力与航天模型中，轨道比较的三条规则需要分开：
+  1. 同一点的向心加速度由万有引力唯一决定；
+  2. 轨道越高，机械能越大；
+  3. 周期比较看开普勒第三定律。<br />
+- 此题失分说明这三条规则没有分层使用，而是混在一起判断。</p>
+<p><strong>第4题：</strong>
+- 弹簧振子题本质上是<strong>变力做功不直接算力，改走动能定理或机械能转化</strong>。<br />
+- 此题失分说明对“弹力做功”的处理还停留在恒力思路，没有切换到能量通道。</p>
+<p><strong>第7题：</strong>
+- 铰链四杆机构的关键不是画图，而是速度分解方向必须<strong>沿杆/垂直杆</strong>。
+- 核心规则是：<strong>同一刚杆两端沿杆方向速度分量相等</strong>。<br />
+- 此题失分说明关联速度原理没有真正落地。</p>
+<p><strong>第8题：</strong>
+- 机械能守恒判定中，必须先定“研究对象”：
+  - 单体守恒？
+  - 还是系统守恒？
+- 若存在摩擦力、系统内非弹簧弹力做功，机械能就不能直接守恒。<br />
+- 此题失分说明“单体”和“系统”两个层次被混用了。</p>
+<p><strong>第10题：</strong>
+- 已有部分得分，说明你已经抓到“恒力下做曲线运动”的某一部分特征。
+- 但未满分通常意味着：<strong>速度大小变化</strong>与<strong>轨迹切线方向变化</strong>没有同时判断。<br />
+- 这类题必须同时看：
+  1. 力与速度夹角；
+  2. 轨迹凹侧；
+  3. 速度是先减小后增大还是单调变化。</p>
+<hr />
+<h3>🔬 实验题重点核查（第11-12题，盯紧卷面）</h3>
+<h4>第11题（$4/6$）</h4>
+<p>卷面可见答案写为：
+- 第$(1)$空：<code>AD</code>
+- 第$(2)$空：<code>3</code>
+- 下一空：<code>0.5</code></p>
+<p>这里先肯定一个局部动作：<br />
+<strong>你已经在第11题使用了数值作答，说明知道这题不是只靠现象判断，而是要落到数据处理。</strong></p>
+<p>但卷面仍有两个必须立刻修正的点：</p>
+<ol>
+<li>
+<p><strong>有效数字风险没有消除。</strong><br />
+   这道平抛实验题的致命点就在有效数字。卷面上直接写 <code>3</code>、<code>0.5</code>，如果题干要求“保留一位有效数字”或要求带单位、按规范写成最终实验量，那么末位处理必须严格服从要求，不能只给一个裸数字。</p>
+</li>
+<li>
+<p><strong>平抛数据处理的公式链没有在卷面上显露。</strong><br />
+   本题应清楚体现：
+   $$
+   \Delta h = gT^2
+   $$
+   以及
+   $$
+   v_0 = \frac{x}{t}
+   $$
+   或等价联立过程。<br />
+   卷面只见结果字符，未见中间物理关系，导致一旦结果字符错位，就没有回捞分的台阶。</p>
+</li>
+</ol>
+<h4>第12题（$2/9$）</h4>
+<p>卷面可见答案写为：
+- 第$(1)$空：<code>C</code>
+- 第$(2)$中两处数值：<code>3.53</code>、<code>3.53</code>
+- 结论句：<code>m_1,m_2组成系统机械能守恒</code>
+- 第$(3)$空：<code>3.24</code></p>
+<p>先指出一个正确动作：<br />
+<strong>你已经明确把研究对象写成“$m_1,m_2$组成系统”，这一步方向是对的。</strong><br />
+这说明你知道这题不能只盯单个物体。</p>
+<p>接下来问题很具体：</p>
+<ol>
+<li>
+<p><strong>两处都写成 <code>3.53</code>，瞬时速度处理痕迹不足。</strong><br />
+   打点计时器题中，某点瞬时速度应由该点前后相邻位移的平均速度求出，即
+   $$
+   v_n = \frac{x_{n-1,n+1}}{2T}
+   $$
+   不同位置若对应纸带数据不同，结果一般不会机械重复。<br />
+   卷面两处同写 <code>3.53</code>，说明这里很可能把速度处理做成了“套同一个数”。</p>
+</li>
+<li>
+<p><strong>结论句只有文字，没有验证式。</strong><br />
+   不能只写“机械能守恒”，必须对应写出定量关系，例如
+   $$
+   \Delta E_k = \Delta E_p
+   $$
+   或展开成
+   $$
+   \frac{1}{2}(m_1+m_2)v^2 = (m_2-m_1)gh
+   $$
+   这一层若不落笔，实验结论缺少物理支撑。</p>
+</li>
+<li>
+<p><strong>第$(3)$空写成 <code>3.24</code>，斜率物理意义明显偏离。</strong><br />
+   若本题要求由 $\frac{v^2}{2}-h$ 图像求 $g$，则斜率 $k$ 不是直接等于 $g$，而应满足
+   $$
+   k=\frac{m_2-m_1}{m_1+m_2}g
+   $$
+   所以
+   $$
+   g=\frac{m_1+m_2}{m_2-m_1}k
+   $$
+   卷面这个 <code>3.24</code>，很像是把斜率、重力加速度、或质量比之间的换算少做了一步。</p>
+</li>
+</ol>
+<hr />
+<h3>🔍 专属大题微观面批（第13-15题，核心病灶分析）</h3>
+<h4>第13题（$0/12$）</h4>
+<p>这一题卷面几乎没有形成物理建模。<br />
+<strong>当前不是“算错”，而是“首个动力学方程没有落下去”。</strong></p>
+<p>本题第一步必须直接建立近地卫星模型：
+$$
+mg = m\frac{v_1^2}{R}
+$$
+并与万有引力关系联立：
+$$
+G\frac{Mm}{R^2}=mg
+$$</p>
+<p>下一步再把密度引入：
+$$
+\rho = \frac{M}{V}, \qquad V=\frac{4\pi R^3}{3}
+$$</p>
+<p>这道题的关键不是代很多数，而是尽快整理出
+$$
+g \propto \rho R
+$$
+或等价解析式。<br />
+<strong>卷面断裂点就在：没有先把“重力加速度—第一宇宙速度—密度”三者接成一个方程链。</strong><br />
+一旦这一步没写，后面没有任何可计算对象。</p>
+<hr />
+<h4>第14题（$2/14$）</h4>
+<p>先肯定一个正确步骤：<br />
+<strong>你在卷面开头写出了向心加速度</strong>
+$$
+a_n=\omega^2L
+$$
+这一步是本题的起点，完全正确。说明模型识别已经碰到核心。</p>
+<p>但下一个断裂点马上出现了：</p>
+<ol>
+<li><strong>最高点、最低点的受力方向没有稳定落到牛顿第二定律。</strong><br />
+   本题必须分别对两个小球、两个特殊位置列式，尤其要先定“杆对球是拉还是推”。<br />
+   标准结构应是：</li>
+<li>最高点：
+     $$
+     F_A + 4mg = 4m\omega^2L
+     $$</li>
+<li>最低点：
+     $$
+     F_B - 5mg = 5m\omega^2L
+     $$</li>
+</ol>
+<p>你卷面上虽然出现了 $F_A$、$F_B$、$mg$、$\omega^2L$，但这些量之间的符号连接不稳定，导致后面的数值关系失去依据。<br />
+<strong>不是数值先错，而是“向心方向取正后，重力与杆力谁同向谁反向”没有先固定。</strong></p>
+<ol>
+<li><strong>第$(3)$问的思路方向是对的，但分力不完整。</strong><br />
+   卷面可见你写了类似“水平分量 + 竖直分量再合成”的结构，这个动作是正确的。<br />
+   本题在水平位置确实应分成：
+   $$
+   F_x = 4m\omega^2L
+   $$
+   和
+   $$
+   F_y = 4mg
+   $$
+   最后
+   $$
+   F_A=\sqrt{F_x^2+F_y^2}
+   $$
+   <strong>断裂点在于：如果前面 $\omega^2L$ 的数值来自错误方程，那么这里即使会合成，最终结果仍会整体偏离。</strong></li>
+</ol>
+<p>也就是说，第14题的问题不是不会“合力勾股”，而是<strong>前一层圆周动力学建模未锁定，后面的矢量合成被错误源头拖走了</strong>。</p>
+<hr />
+<h4>第15题（$6/19$）</h4>
+<p>先指出一个明确正确步骤：<br />
+卷面可见你已经写出了弹簧释能关系和传送带受力关系，核心模型入口是对的：
+$$
+E_p=\frac{1}{2}kx^2=\frac{1}{2}mv_0^2
+$$
+以及
+$$
+\mu mg = ma
+$$
+这两步都说明你知道本题是“能量起步 + 传送带动力学分段”。</p>
+<p>真正的逻辑断裂出现在后续三处：</p>
+<ol>
+<li><strong>传送带阶段的分段判定不先做，直接算总时间。</strong><br />
+   卷面上有 $t_1+t_2$ 的痕迹，也写了若干位移、速度关系，这说明你意识到可能要分段。<br />
+   但本题不能先加时间，必须先判断：</li>
+<li>物块相对皮带是一直滑动？</li>
+<li>还是先滑动后共速？</li>
+</ol>
+<p>判定顺序应是：
+   1. 先由
+      $$
+      a=\mu g
+      $$
+      求加速度；
+   2. 再用
+      $$
+      v^2-v_0^2=2ax
+      $$
+      判断是否在带长内达到皮带速度；
+   3. 若达到，则后面是匀速阶段。<br />
+<strong>如果这一步未先判定，时间、位移、产热会同时乱套。</strong></p>
+<ol>
+<li>
+<p><strong>产热量不能用绝对位移，必须用相对位移。</strong><br />
+   本题摩擦生热应写成
+   $$
+   Q=\mu mg\,\Delta x_{\text{相对}}
+   $$
+   不是物块对地位移，也不是皮带对地位移。<br />
+   卷面上你写了
+   $$
+   Q=f\Delta x
+   $$
+   这种结构，但后面的 $\Delta x$ 若没有明确成“相对位移”，这一问就会直接失分。</p>
+</li>
+<li>
+<p><strong>圆轨道临界条件没有展开成完整判定区间。</strong><br />
+   上行到最高点应先用动能定理：
+   $$
+   -2mgR=\frac{1}{2}mv_C^2-\frac{1}{2}mv_{A1}^2
+   $$
+   再判定最高点不断轨：
+   $$
+   mg \le m\frac{v_C^2}{R}
+   $$
+   这里不是只解一个临界值，而是要分清：</p>
+</li>
+<li>能完整过最高点的条件；</li>
+<li>不能完整过顶、但仍可在下半圆摆动的条件。<br />
+   这题隐藏的是<strong>双区间约束</strong>，卷面目前只看到你在追一个速度值，没有把“完整圆周”和“下半圆摆动”分成两类讨论。</li>
+</ol>
+<hr />
+<h3>🎯 章老师的靶向修正指令</h3>
+<p>下面只做能立刻执行的修正，不说空话。</p>
+<h4>1. 第13题模板，今晚直接默写 3 遍</h4>
+<p>每遍只准写这 4 行：
+$$
+mg=m\frac{v_1^2}{R}
+$$
+$$
+G\frac{Mm}{R^2}=mg
+$$
+$$
+\rho=\frac{M}{\frac{4}{3}\pi R^3}
+$$
+$$
+\text{消去 }M,R\text{，把 }g,v_1,\rho\text{ 连成一个解析式}
+$$
+要求：<strong>每一遍都必须把“消去谁”写出来。</strong></p>
+<h4>2. 第14题只练“三位置列式”，每次只做一件事</h4>
+<p>把竖直圆周双球题分成三格抄写：</p>
+<ul>
+<li>最高点：先画向心方向，再写
+  $$
+  \sum F_{\text{向心}}=m\omega^2L
+  $$</li>
+<li>最低点：同样先定向心方向，再写方程。</li>
+<li>水平位置：只做分解
+  $$
+  F_x=m\omega^2L,\qquad F_y=mg,\qquad F=\sqrt{F_x^2+F_y^2}
+  $$</li>
+</ul>
+<p>要求：<br />
+<strong>每次列式前先在题旁写 4 个字：<code>向心向哪</code>。</strong><br />
+不先写这 4 个字，不允许下笔列式。</p>
+<h4>3. 第15题传送带部分，按固定四步走</h4>
+<p>以后凡是传送带题，严格写成：</p>
+<p><strong>第1步：受力</strong>
+$$
+f=\mu mg,\qquad a=\mu g
+$$</p>
+<p><strong>第2步：先判是否共速</strong>
+$$
+v^2-v_0^2=2ax
+$$</p>
+<p><strong>第3步：分段算时间</strong>
+- 滑动段：
+  $$
+  v=v_0+at
+  $$
+- 共速后：
+  $$
+  x=vt
+  $$</p>
+<p><strong>第4步：单独算热</strong>
+$$
+Q=\mu mg\,\Delta x_{\text{相对}}
+$$</p>
+<p>要求：<br />
+<strong>每道传送带题都把“相对位移”5个字圈出来。</strong></p>
+<h4>4. 第12题实验，重新订正时只补两个公式</h4>
+<p>在原题旁边补写：
+$$
+v_n=\frac{\Delta x}{2T}
+$$
+和
+$$
+k=\frac{m_2-m_1}{m_1+m_2}g
+$$
+然后把卷面上的 <code>3.53</code>、<code>3.53</code>、<code>3.24</code> 三个数字各自对应到公式来源。<br />
+若说不清这三个数分别从哪一步来，这题就等于没有真正订正完。</p>
+<h4>5. 客观题本周只回炉 5 道：1、3、4、7、8</h4>
+<p>不是重做整张卷，只做以下动作：
+- 第1题：写出“曲线运动成立条件”一句话。
+- 第3题：写出“同一点向心加速度由谁决定”一句话。
+- 第4题：写出“变力做功优先走哪条路”一句话。
+- 第7题：画一根杆，标出“沿杆”“垂杆”两个方向。
+- 第8题：每题先写“研究对象：单体/系统”。</p>
+<p>你当前最该修的，不是算术速度，而是<strong>列式前的物理分层动作</strong>。<br />
+第14题和第15题卷面都已经露出了正确入口，下一步只需要把“方向判定—分段判定—相对量判定”这三道门槛逐个固定下来。</p>
+        </div>
+
+        <div class="footer">
+            <p>基于原始卷面、得分明细及班级均分数据交叉比对生成</p>
+            <p>诊断架构师：<strong>章老师</strong></p>
+                    </div>
+    </div>
+</body>
+</html>
